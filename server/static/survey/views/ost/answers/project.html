@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+
+        <div class="answer">
+            <strong>Project goals: </strong>
+            <span>{{ getAnswer('proj-goals') }}</span>
+        </div>
+        <div class="answer">
+            <strong>Project description: </strong>
+            <span>{{ getAnswer('proj-description') }}</span>
+        </div>
+
+        <div class="answer">
+            <strong>Data availability: </strong> 
+            <span>{{ getAnswer ('proj-data-availability') }}
+                <span ng-show='(getAnswer("proj-data-availability") === "By request" || getAnswer("proj-data-availability") === "Public") && getAnswer("proj-public-data") != ""'> at {{ getAnswer('proj-public-data') }}</span> 
+            </span>
+        </div>
+
+        
+        <div ng-show="user.is_staff" class="padding-top">
+            <h3>Financial Support and Capacity</h3>
+            <div class="answer">
+                <strong>How is the data analyzed and shared? </strong>
+                <span>{{ getAnswer('proj-analyze') }}</span>
+            </div>
+            
+            <div class="answer">
+                <strong>Timeframe of continuing financial support: </strong>
+                <span>{{ getAnswer('proj-financial-support-timeline') }}</span>
+            </div>
+            <div class="answer">
+                <strong>How would additional funding be used?: </strong>
+                <span>{{ getAnswer('proj-operational-capacity-if-funded') }}</span>
+            </div>
+        </div>
+    </div>
+</div>

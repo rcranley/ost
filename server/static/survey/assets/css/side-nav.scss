@@ -1,0 +1,227 @@
+#sidenav {
+    color: white;
+    text-align: center;
+    border-right: 1px solid #bbb;
+    padding-right:0;
+    padding-left:0;
+
+    z-index: 800;
+    -webkit-box-shadow: 1px 0px 4px rgba(0,0,0,0.3);
+    box-shadow: 1px 0px 4px rgba(0,0,0,0.3);
+
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    img {
+        width:100%;
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 0.85em;
+    }
+
+    .select2-container  {
+        width:100%;
+    }
+
+    .box h1, .box p{
+        color:#E6E8E9;
+    }
+}
+
+.stats {
+    border-bottom:1px solid $os-border-grey;
+    h1 {
+        margin-top: 10px;
+    }
+    #side_total {
+        background: #004C72;
+        h1 {
+            font-size: 4em;
+        }
+    }    
+    #side_completed {
+        background: #C24118;
+    }
+    #side_started {
+        background: #70AFB6;
+    }
+}
+
+.row .box{
+  padding-bottom: 10px;
+
+}
+
+.sidebar_nav {
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;;
+    line-height: 1.428571429;
+    margin-bottom: 30px;
+
+    background-color:#FFF;
+    color: #195D68;
+    // text-transform: uppercase;
+    
+
+    ul {
+        padding-left:0;
+        margin-bottom: 0;
+    }
+    
+    ul.nav > li {
+        > a {
+            font-size: 19px;
+            color: #555;
+            padding: 12px 25px;
+            &.active {
+                color: $os-lightblue;
+            }
+        }
+        list-style: none outside none !important;
+        // height: 50px;
+        min-height: 50px;
+        border-bottom:1px solid $os-border-grey;
+        
+        .dropdown-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            display: block;
+            width: 60px;
+            height: 50px;
+            text-align: center;
+            line-height: 55px;
+            color: #004F73;
+
+           .icon-chevron-up {
+                display: none;
+            }
+
+        }
+        .dropdown-menu {
+            position:static;
+            width:100%;
+            z-index: 1000;
+            border:none;
+            box-shadow:none;
+
+            li {
+                border:none;
+            }
+        }
+
+    }
+    .nav > li {
+        text-align: left;
+    }
+
+    li.open {
+        height:150px;
+
+        .dropdown-toggle {
+            color:$os-medred;
+        }
+
+        a {
+            background-color: inherit;
+        }
+
+        .icon-chevron-down {
+            display: none;
+        }
+        .icon-chevron-up {
+            display: inline;
+        }
+
+    }
+
+    li.open.current {
+        height:220px;
+    }
+
+    li a:hover {
+        text-decoration: none;
+        background-color: inherit;
+    }
+
+    .control {
+        padding: 0 12px 25px 12px;
+        button {
+            margin-left: auto;
+            margin-right:auto;
+        }
+    }
+    .help-link {
+        display: block;
+        font-size: 19px;
+        color: inherit;
+    }
+
+    a:hover, .help-link:hover {
+        color: $os-lightblue !important;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}
+
+form.search {
+    background-color:$os-bg-color;
+    border-bottom:1px solid $os-border-grey;
+    margin-bottom: 0;
+    input, button {
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 150%;
+        font-family: 'Gotham Rounded SSm A','Gotham Rounded SSm B';
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    button {
+        margin-left: 0 !important;
+        color: #444444;
+    }
+    input {
+        &:focus {
+            box-shadow: none;
+            border-color: $os-border-grey;
+        }
+        border:none;
+        background:none;
+        box-shadow:none;
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-right:1px solid $os-border-grey;
+    }
+    .input-group-addon {
+        font-size: 16px;
+        padding: 6px 0px 6px 25px;
+        padding-left: 25px;
+        background-color:$os-bg-color;
+        border:none;
+    }
+    .input-group-btn button {
+        font-size: 16px;
+        padding: 17px 20px 16px;
+        background-color:$os-bg-color;
+        border:none;
+    }
+
+    .input-group-btn button:hover {
+        color: $os-lightblue !important;
+    }
+}
+
+
+

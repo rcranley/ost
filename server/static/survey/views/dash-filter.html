@@ -1,0 +1,28 @@
+<div>
+
+    <!-- single select -->
+    <select ng-if="allowMultiSelect != true" class="single-select2"
+        ui-select2 
+        placeholder="{{placeholderText}}" 
+        ng-model="model.selectedValuesInternal" 
+        ng-change="selectionChanged(value)"
+        >
+        <option value="{{option.value}}" ng-repeat="option in filterOptions">
+            <strong>{{option.displayLabel}}</strong>
+        </option>
+    </select>
+
+    <!-- multi select -->
+    <select ng-if="allowMultiSelect == true" class="multi-select2"
+        ui-select2 
+        allowClear="true"
+        placeholder="{{placeholderText}}" 
+        multiple="true" 
+        ng-model="model.selectedValuesInternal" 
+        ng-change="selectionChanged(value)"
+        >
+        <option value="{{option.value}}" ng-repeat="option in filterOptions">
+            <strong>{{option.displayLabel}}</strong>
+        </option>
+    </select>
+</div>

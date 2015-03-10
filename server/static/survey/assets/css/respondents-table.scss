@@ -1,0 +1,43 @@
+/******************************************************
+Respondent Table Styles
+******************************************************/
+
+th {
+  text-align:center;
+  color:$os-red;
+  background:$os-grey;
+
+  .glyphicon {
+      color:$os-darkgrey;
+  }
+
+}
+
+th.orderable:hover {
+  cursor:pointer;
+  // background: #eee;
+  color: $os-lightblue;  
+}
+
+tr.respondent {
+  &:nth-child(odd){
+    background:#fff;
+  }
+  &:nth-child(even){
+    background:$os-lightred;
+  }
+  td:first-child {
+    color:$os-red;
+  }
+  &:hover {
+    // background:  #eee;
+    cursor: pointer;
+    td:first-child {
+      color: $os-lightblue;
+    }
+  }
+}
+
+/******************************************************
+End Respondent Table Styles
+******************************************************/

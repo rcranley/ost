@@ -1,0 +1,54 @@
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <div class="span12 text-center survey-title"><h4>{{getTitle()}}</h4></div>
+        <!-- <div class="span12 text-center margin-bottom-20"><h4>A separate form must be completed for each trip or month of no fishing</h4></div> -->
+    </div>
+
+    <div class="panel-body paper-report">
+
+        <!-- DID NOT FISH Report -->
+        <div ng-show="respondent.survey == 'did-not-fish' || respondent.survey_slug == 'did-not-fish'" ng-include="viewPath + 'views/didNotFishAnswers.html'"></div>
+
+        <!-- CATCH REPORT -->
+        <div ng-show="respondent.survey == 'catch-report' || respondent.survey_slug == 'catch-report'">
+            
+            <!-- HEADER -->
+            <div ng-include="viewPath + 'views/headerAnswers.html'"></div>
+
+            <!-- HOOK & LINE -->
+            <div ng-show="gearTypeIncludes('hook')" ng-include="viewPath + 'views/hookAndLineAnswers.html'"></div>
+            
+            <!-- TRAPS -->
+            <div ng-show="gearTypeIncludes('traps')" ng-include="viewPath + 'views/trapsAnswers.html'"></div>
+                
+            <!-- NETS -->
+            <div ng-show="gearTypeIncludes('nets')" ng-include="viewPath + 'views/netsAnswers.html'"></div>
+
+            <!-- SPEAR OR BY HAND -->
+            <div ng-show="gearTypeIncludes('hand')" ng-include="viewPath + 'views/spearOrByHandAnswers.html'"></div>
+
+        </div>
+    
+    </div>
+
+</div>
+
+
+<style type="text/css">
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+.margin-left-10 {
+    margin-left: 10px;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+</style>
+

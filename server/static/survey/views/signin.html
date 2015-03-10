@@ -1,0 +1,121 @@
+<div id="wrap" class="main signin thin-page">
+    <div class="container" style="max-width: 600px;">
+        <div class="page-content">
+            <div class="page-header">
+                <img src="static/survey/assets/img/oceanspaces-logo.png" class="center oceanspaces-logo logo" />
+                <h1 class="ost-title">Central Coast Monitoring Survey</h1>
+            </div>
+
+            <p style="margin: 0 20px 25px 20px; max-width: 500px;">
+                Welcome! The Ocean Science Trust is conducting a survey of monitoring activities in the Central Coast of California. Results will inform planning and implementation of MPA monitoring in this region, and will be available on OceanSpaces.org.
+            </p>
+
+            <div class="login-container" ng-hide="showLoginForm">
+                <p style="margin: 20px 0px 10px 10px; max-width: 500px;">
+                    To take the survey, <a href="/respond#/signup">create a username and password by clicking here</a>. This will allow you to revisit the survey and allow us to track participation.
+                </p>
+
+                <p style="margin: 20px 0px 10px 10px; max-width: 500px;">
+                    Already have a username and password? <a href="javascript:void(0)" ng-click="showLoginForm = true;">Login here</a>
+                </p>
+
+<!--                 <div class="btn-container" style="max-width: 400px;">
+                    <a class="btn btn-main btn-default" href="/respond#/signup">Create Survey Account</a>
+                </div>
+
+                <p style="margin: 0px 55px 10px 70px; max-width: 500px; font-size: 12px; font-family: arial;">
+                    This will allow you to take the survey and revisit the survey and will allow us to track participation.
+                </p>
+
+                <p style="margin: 20px 0px 10px 10px; max-width: 500px;">
+                    Already have a survey account? <a href="javascript:void(0)" ng-click="showLoginForm = true;">Login here</a>
+                </p>
+-->
+
+<!--
+                <div class="auth-separator">
+                    <div class="or-auth-separator">
+                        OR
+                    </div>
+                </div>
+ -->
+
+                <!-- <p ng-hide="showLoginForm" style="margin: 0px 0px 10px 10px; max-width: 500px;">Already have a Central Coast Monitoring Survey account? .</p> -->
+
+            </div>
+
+            <div class="login-container" ng-show="showLoginForm">
+
+                <div class="new-user-form signin-form" ng-show="showForgotPassword">
+                    <form ng-submit="forgotPassword(forgotUser)">
+                        <fieldset ng-disabled="working">
+                            <h4 class="question-title">Enter your email address</h4>
+                            <input type="email" class="form-control username" ng-model="forgotUser.email" autocapitalize="off">
+                            <div class="error" ng-show="showError == 'user-not-found'">
+                                No user found for that email address.
+                            </div>
+                            <div class="error" ng-show="showError == 'multiple-users-found'">
+                                Multiple users found with that email address. 
+                            </div>
+
+                        </fieldset>
+                        <button class="btn btn-main btn-default" ng-disable="forgotUser.email">Submit</button>
+                        <a class="btn btn-main btn-default" ng-click="showForgotPassword = false">Cancel</a>
+                    </form>
+                </div>
+                <div class="new-user-form signin-form" ng-show="showForgotPasswordDone">
+                    <h3>Link Sent</h3>
+                    <p>Please check your email for a link to reset your password.</p>
+                    <a class="btn btn-main btn-default btn-block" ng-click="showForgotPasswordDone = false">Ok</a>
+                </div>
+
+                <div class="new-user-form signin-form" ng-hide="!showLoginForm || working || showForgotPassword || showForgotPasswordDone || showTempUser">
+                    <form ng-submit="authenticateUser(authUser)">
+                        <!-- <div class="row">
+                            <div class="col-sm-6">
+                                <h4 class="question-title">Username</h4>
+                                <input type="text" class="form-control username" ng-model="authUser.username" autocapitalize="off" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="question-title">Password</h4>
+                                <password password-text="authUser.password"></password>
+                            </div>
+                        </div> -->
+                        <fieldset ng-disabled="working">
+                            <h4 class="question-title">Username</h4>
+                            <input type="text" class="form-control username" ng-model="authUser.username" autocapitalize="off" required>
+                            <h4 class="question-title">Password</h4>
+                            <password password-text="authUser.password"></password>
+                        </fieldset>
+                        <button class="btn btn-main" ng-disabled="! (authUser.username &&  authUser.password)">Login</button>
+                        <button class="btn btn-main" ng-click="showLoginForm = false">Cancel</button>
+
+                        <div class="alert alert-danger" ng-show="showError == 'auth-error'">
+                            <i class="icon-exclamation-sign"></i> There was a problem authenticating. Please try again.
+                        </div>
+
+                        <a class="os-red-link" style="margin-left: 10px;" ng-click="showForgotPassword = true" href="javascript:void(0)">Forgot your password?</a>
+                    </form>
+                </div>
+
+<!--                 <div class="auth-separator" style="margin-top: 25px; margin-bottom: 25px;">
+                </div>
+
+                <div class="btn-container">
+                    <p class="btn-caption" style="margin-bottom: 15px;">This survey is being conducted to help inform ocean planning in the Central California region. Results will be posted to OceanSpaces.org.</p>
+                    <a class="btn btn-main btn-default" href="/respond#/about">Learn more</a>
+                </div>
+ -->
+                <div class="loading-indicator" ng-show="working">
+                    <div class="bar">
+                        <i class="sphere"></i>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin: 20px 20px 35px 20px; max-width: 500px;" ng-hide="showLoginForm">
+                <a class="signin-link" href="/respond#/about">Learn more about this survey&nbsp;&raquo;</a>
+            </p>
+        </div>
+    </div>
+</div>

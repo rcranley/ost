@@ -1,0 +1,51 @@
+{% extends "admin/hapifis_admin_base.html" %}
+{% load i18n admin_static %}
+{% block hapifis_content %}
+<!-- <h1>ADMINISTRATIVE DASHBOARD</h1> -->
+{% if form.errors and not form.non_field_errors and not form.this_is_the_login_form.errors %}
+  <p class="errornote">
+  {% blocktrans count counter=form.errors.items|length %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+  </p>
+{% endif %}
+
+{% if form.non_field_errors or form.this_is_the_login_form.errors %}
+  {% for error in form.non_field_errors|add:form.this_is_the_login_form.errors %}
+  <p class="errornote">
+      {{ error }}
+  </p>
+  {% endfor %}
+{% endif %}
+<form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+<div class="form-group">
+  {% if not form.this_is_the_login_form.errors %}{{ form.username.errors }}{% endif %}
+  {{ form.username }}
+</div>
+<div class="form-group">
+  {% if not form.this_is_the_login_form.errors %}{{ form.password.errors }}{% endif %}
+  {{ form.password }}
+  <input type="hidden" name="this_is_the_login_form" value="1" />
+  <input type="hidden" name="next" id="next_url" />
+</div>
+{% endblock %}
+{% block hapifis_content_nobg %}
+<div class="submit-row">
+    <input type="submit" class="btn btn-default" value="{% trans 'Sign In' %}" />
+
+  <!-- <a href="/login/ost/?next=/dash">Login with ost</a><br/>
+  <a href="/login/google/?next=/dash">Login with google</a> -->
+  
+</div>
+<div class="forgot-row">
+    <a href="{% url 'admin_password_reset' %}">{% trans 'Forgot password?' %}</a>
+</div>
+</form>
+
+<script type="text/javascript">
+  document.getElementById('id_username').focus()
+  document.getElementById('id_username').setAttribute('placeholder', 'Username')
+  document.getElementById('id_password').setAttribute('placeholder', 'Password')
+  document.getElementById('id_username').setAttribute('class', 'form-control')
+  document.getElementById('id_password').setAttribute('class', 'form-control')
+  //document.getElementById('next_url').setAttribute('value', window.location.href)
+</script>
+{% endblock %}

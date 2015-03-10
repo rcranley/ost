@@ -1,0 +1,388 @@
+/* Use oceanspaces background */
+body {
+    background-color: #f3f4f6;
+	/*background: #9cb9bf url(/static/survey/assets/img/oceanspaces-background.jpg) no-repeat top center;*/
+}
+
+.progress-container p.small-label {
+    color: #002535;
+}
+
+.menu-page .progress .progress-bar {
+	background-color: #005072;
+}
+
+
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    /*font-family: Arial,Verdana,MuseoSans-500 !important;*/
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+    /*font-family: MuseoSans-300, Arial;*/
+}
+
+
+/* Change all uppercase text to normal */
+.btn-main,
+#history-wrap .panel-heading,
+.select-content, 
+.accordion-heading,
+.block-title,
+.question-title,
+.question .panel-heading {
+	text-transform: none;
+}
+
+.navbar {
+    background-color: #004C72;
+}
+
+/*
+ *  White background container around page.
+ */ 
+
+.page-content {
+	padding: 20px;
+	-webkit-border-radius: 2px;
+			border-radius: 2px;
+	-webkit-box-shadow: 0 0 3px 2px #6C7175;
+			box-shadow: 0 0 3px 2px #6C7175;
+	-webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, .15);
+			box-shadow: 0 0 3px 2px rgba(0, 0, 0, .15);
+    background-color: white;
+    opacity: 1.0 !important;
+}
+
+
+.page-content.extra-padding {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.page-content {
+    color: #474747;
+}
+
+.form-control.ng-pristine, .unit-select.ng-pristine {
+    border: 1px solid #BBB;
+    color: #555; 
+}
+
+#wrap.menu-page > .container {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.block-title,
+.question-title,
+h1, h2, h3, h4, h5 {
+    color: #002535;
+}
+
+.info-content h3 {
+	margin-top: 0;
+	font-size: 22px;
+}
+.info-content p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.block-title,
+.question-title {
+	line-height: 24px;
+}
+
+
+/* Multi / single select grey & blue */
+
+/* Grey if not selected */
+.multi-select .option-unchecked .select-content,
+.multi-select .option-checked   .select-unchecked .select-content,
+      .select .option-unchecked .select-content,
+      .select .option-checked   .select-unchecked .select-content {
+	background-color: #AEB9BF !important;
+}
+.question .select .accordion-toggle {
+    color: white;
+}
+/* Blue if selected */
+.multi-select .select-checked .select-content,
+.multi-select .select-checked .select-content .select-name,
+	  .select .option-checked .select-checked .select-content,
+      .select .option-checked .select-checked .select-content .select-name {
+	background-color: #72AFB6 !important;/*005072*/
+}
+/* Grouped */
+.question .panel-heading {
+    background-color: #AEB9BF !important;
+}
+.select-content, .btn-main:active, .accordion-heading,
+.question .multi-select-grouped-other {
+	background-color: #AEB9BF !important;
+}
+.question .panel-body .select-checked .select-content {
+	background-color: #72AFB6 !important;
+}
+.multi-select-grouped-other {
+    background-color: #AEB9BF !important;
+}
+
+/* Sign in page */
+.main .oceanspaces-logo {
+	height: 50px;
+}
+
+.main h1.ost-title,
+.or-auth-separator,
+p.intro {
+    color: #005072;
+}
+
+.or-auth-separator {
+	background-color: white;
+	color: #474747;
+	top: -9px;
+}
+
+.auth-separator {
+    margin-top: 30px;
+}
+
+.sign-up a,
+.forgot-password {
+	color: #005A84;
+}
+
+.page-content a.dark {
+    color: #005A84;
+    font-size: 16px;
+}
+
+.signin-form .forgot-password {
+	font-size: 14px;
+}
+
+.footer .prepend-point97-logo {
+	margin-top: 0;
+}
+.error {
+	font-size: 16px;
+}
+
+
+/* Multi / single select light blue & dark blue */
+
+/* Dark blue if not selected */
+.multi-select .option-unchecked .select-content,
+.multi-select .option-checked   .select-unchecked .select-content,
+      .select .option-unchecked .select-content,
+      .select .option-checked   .select-unchecked .select-content {
+	background-color: #005072 !important;
+}
+.multi-select .option-unchecked .select-unchecked .select-content .select-name,
+      .select .option-unchecked .select-content .select-name,
+      .select .option-checked   .select-unchecked .select-name,
+.grouped-options .panel-title {
+	color: white !important;      	
+}
+
+/* Light blue if selected */
+.multi-select .select-checked .select-content,
+.multi-select .select-checked .select-content .select-name,
+	  .select .option-checked .select-checked .select-content,
+      .select .option-checked .select-checked .select-content .select-name,
+      .select .single-select-other:focus,
+      .select .option-checked .other-option .single-select-other:focus {
+	background-color: #72AFB6 !important;
+}
+
+/* Grouped */
+.question .panel-heading {
+    background-color: #005072 !important;
+}
+.select-content, .btn-main:active, .accordion-heading {
+	background-color: #AEB9BF;
+}
+.question .panel-body .select-checked .select-content {
+	background-color: #72AFB6 !important;
+}
+.question .panel-body .select-unchecked .select-content .select-name {
+	color: #000;
+}
+.question .panel-body .select-checked .select-content .select-name {
+	color: #000;	
+}
+/* Grouped multi-select needs this extra bit */
+.info .panel-heading h4, .question .panel-title,
+.info .panel-heading h4:hover, .question .panel-title:hover,
+.panel-title > a {
+	color: white;
+	cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* Other */
+::-webkit-input-placeholder {
+	color: white !important;
+}
+
+
+/*
+ *
+ *  Increase page width for maps.
+ * 
+ */
+body.map-question .container {
+	margin: 0;
+	width: auto;
+}
+
+@media (min-width: 768px) {
+	body.map-question .container {
+		width: auto;
+	}
+}
+
+.map-question #page-controls {
+    padding-top: 20px;
+}
+
+
+
+/**
+ * Changes made day before launch to better 
+ * match the OceanSpaces.org that was also just 
+ * now launched.
+ */
+.os-red-link,
+.page-content p a,
+.modal-body ul a
+{
+    color: #c24118;
+}
+.os-red-link:hover,
+.os-red-link:focus,
+.page-content p a:hover,
+.page-content p a:focus
+.modal-body ul a:hover,
+.modal-body ul a:focus
+{
+    color: #70afb6;
+}
+
+.ef-descriptions-modal .def-container {
+    height: 130px;
+}
+
+.info-content p,
+.info-content span,
+.info-content ul,
+.ost-map > p {
+    font-family: font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: MuseoSans-300, Arial;*/
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #002535;
+}
+.info-content li {
+    margin-bottom: 8px;
+}
+
+.or-auth-separator {
+    left: 41%;
+    font-weight: bold;
+}
+.signin-form fieldset, .new-user-form fieldset
+{
+    margin-bottom: 20px;
+}
+
+.btn.eye { color: white; }
+.btn.eye:hover { color: #ddd; }
+
+.info-content h3,
+.block-title {
+    font-weight: normal;
+    /*letter-spacing: 1px;*/
+    text-transform: none;
+}
+
+
+
+
+
+.dash-map-ost { 
+    height: 500px;
+}
+.dash-map-ost .leaflet-control-zoom a {
+    background-color: white !important;
+}
+.dash-map-ost .leaflet-control-zoom a.leaflet-control-zoom-in {
+    -moz-border-top-left-radius: 2px !important;
+    -webkit-border-top-left-radius: 2px !important;
+    border-top-left-radius: 2px !important;    
+    -moz-border-top-right-radius: 2px !important;
+    -webkit-border-top-right-radius: 2px !important;
+    border-top-right-radius: 2px !important;    
+}
+.dash-map-ost .leaflet-control-zoom a.leaflet-control-zoom-out {
+    -moz-border-bottom-left-radius: 2px !important;
+    -webkit-border-bottom-left-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;    
+    -moz-border-bottom-right-radius: 2px !important;
+    -webkit-border-bottom-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;    
+}
+.dash-map-ost .map-controls {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    z-index: 1000;
+}
+.dash-map-ost .leaflet-popup-content-wrapper {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    min-width: 250px;
+    min-height: 225px;
+}
+
+.dash-map-ost .leaflet-popup-content .load-indicator {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+
+/*
+    MAP LEGEND
+ */
+#map-legend {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#map-legend li {
+    float:left;
+    margin-right:9px;
+}
+
+.circle {
+    display:inline-block;
+    border-radius: 50%;
+    width: 13px;
+    height: 12px;
+}
+
+#map-legend ul .circle {
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.popup-content.planning-unit h5{
+    margin-bottom:0;
+}

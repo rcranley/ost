@@ -1,0 +1,30 @@
+<div class="main dash-ecosystems" ng-cloak>
+    <div class="row" ost-header></div>
+    
+    <div class="main-content">
+        <div class="row">
+            <h2>{{page_title}}</h2>
+            <div class="col-sm-12">
+                <p>Many different kinds of organizations and projects are gathering data in the Central Coast. The figures below help to characterize this community though the type, size, and duration of projects.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div pie-chart chart="charts['org-type']" class="pie-chart"></div>
+            </div>
+            <div class="col-sm-6">
+                <div pie-chart chart="charts['proj-num-people']" class="pie-chart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div pie-chart chart="charts['proj-data-years']" class="pie-chart"></div>
+            </div>
+            <div class="col-sm-6">
+                <div pie-chart chart="charts['proj-data-frequency']" class="pie-chart"></div>
+            </div>
+        </div>
+    </div><!-- end main-content -->
+</div> 
+<div ng-include="'/static/survey/views/ost/dash-footer.html'"></div>

@@ -1,0 +1,475 @@
+/*
+
+DO NOT EDIT THE .CSS VERSION OF THIS FILE. Instead run
+`sass ost-dash.scss > ast-dash.css` in this file's directory 
+to build it. 
+
+*/
+html {
+  min-width: 900px; }
+
+html, body, .dashboard {
+  height: 100%; }
+
+#topnav {
+  background: #005072;
+  margin-top: 0; }
+
+.oceanspaces-logo {
+  height: 60px;
+  padding-top: 0; }
+
+.point97-logo {
+  height: 20px;
+  margin-top: 20px; }
+
+img.welcome {
+  width: 100%;
+  max-width: 700px; }
+
+img.welcome-small {
+  width: 100%; }
+
+.dashboard {
+  margin: 0; }
+
+.main, footer {
+  margin-left: 275px; }
+
+.main {
+  margin-bottom: -117px;
+  min-height: 100%; }
+
+.main:after {
+  height: 117px;
+  display: block;
+  content: ""; }
+
+footer, .main:after {
+  height: 117px; }
+
+.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+#sidenav {
+  width: 275px;
+  position: absolute;
+  min-height: 100%; }
+
+.dash-map-ost {
+  height: 500px; }
+
+.leaflet-control-zoom a {
+  background-color: white !important; }
+
+.leaflet-control-zoom a.leaflet-control-zoom-in {
+  -moz-border-top-left-radius: 2px !important;
+  border-top-left-radius: 2px !important;
+  -moz-border-top-right-radius: 2px !important;
+  border-top-right-radius: 2px !important; }
+
+.leaflet-control-zoom a.leaflet-control-zoom-out {
+  -moz-border-bottom-left-radius: 2px !important;
+  border-bottom-left-radius: 2px !important;
+  -moz-border-bottom-right-radius: 2px !important;
+  border-bottom-right-radius: 2px !important; }
+
+.map-controls {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  z-index: 1000; }
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+  min-width: 250px;
+  min-height: 225px; }
+
+.leaflet-popup-content .load-indicator {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 50px; }
+
+/*
+    MAP LEGEND
+ */
+#map-legend li {
+  display: inline-block;
+  margin-right: 9px; }
+
+.point {
+  font-size: 1.6em;
+  line-height: 0.5; }
+
+.leaflet-popup #map-legend .point {
+  cursor: pointer; }
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 13px;
+  height: 12px; }
+
+.table-ef-list {
+  padding-left: 10px; }
+  .table-ef-list li {
+    margin-left: 1.6em;
+    position: relative;
+    list-style: none; }
+    .table-ef-list li .point {
+      position: absolute;
+      left: -0.8em;
+      top: 0.15em; }
+
+#map-legend ul .circle {
+  margin-top: 3px;
+  margin-right: 3px; }
+
+.pie-chart h3 {
+  height: 53px; }
+.pie-chart .download_cog {
+  top: 70px; }
+
+.leaflet-popup-content h5 {
+  text-transform: none;
+  font-size: 16px; }
+
+.answer {
+  margin-bottom: 10px; }
+
+.def-container {
+  height: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: inset 1px 1px 3px 0px rgba(50, 50, 50, 0.3); }
+
+.def-container dt {
+  margin-top: 15px; }
+
+/*
+
+These styles are taken from oceanspaces.org and are used on the dash board.
+
+*/
+.container-padding {
+  padding: 30px 62.5px; }
+
+h1 {
+  margin-bottom: 18px; }
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px; }
+
+h3, h4, h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+
+header {
+  border-bottom: 1px solid #CCCCCC;
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B'; }
+  header h1 {
+    margin-bottom: 0; }
+  header h3 {
+    color: #70afb6; }
+
+footer {
+  background-color: #373e48; }
+  footer .nav-pills a {
+    color: #fff; }
+  footer .nav-pills a:hover {
+    color: #c24118;
+    background: none;
+    border: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #004c72; }
+
+h1, h2 {
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+  font-weight: 400;
+  font-style: normal;
+  color: #004c72;
+  margin-top: 0;
+  line-height: 120%; }
+
+.main {
+  background-color: #f3f4f6; }
+
+.main-content {
+  background-color: white;
+  color: #666666;
+  font-size: 15px; }
+  .main-content > .row {
+    padding: 15px 62.5px 0 62.5px; }
+  .main-content > .row:first-child {
+    padding-top: 30px; }
+
+.user-menu ul.dropdown-menu {
+  background-color: white;
+  width: 400px;
+  left: auto;
+  right: 0;
+  padding: 20px; }
+
+form .form-required {
+  color: red; }
+form label {
+  display: block;
+  color: #6C6C71; }
+form input.ng-invalid.ng-dirty {
+  background-color: #FF9999; }
+
+.os-btn {
+  color: #c04504;
+  font-size: 1em;
+  line-height: 1;
+  border: 3px solid #D6D6D6;
+  border-radius: 25px;
+  padding: 11px 18px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; }
+  .os-btn .default {
+    background-color: #F7F7F7; }
+
+.user-menu {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 800;
+  margin: 0; }
+  .user-menu .greeting {
+    color: #c04504;
+    font-size: 1.5em;
+    line-height: 1;
+    border-top: none;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 11px 18px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle; }
+  .user-menu li > .os-btn {
+    border: 1px solid #D6D6D6;
+    border-top: none;
+    border-radius: 0;
+    font-size: 14px; }
+  .user-menu .nav-tabs-inverse {
+    font-weight: 500; }
+    .user-menu .nav-tabs-inverse li {
+      float: left; }
+
+.nav-tabs-inverse > li:first-child, .nav-tabs-inverse > li.first {
+  border-left: 0; }
+
+.os-btn:hover {
+  background-color: #FBF8F2;
+  text-decoration: none;
+  color: #c04504; }
+
+.modal-header {
+  color: white;
+  font-size: 16px;
+  background-color: #373e48;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+/**********************************
+General Surgical Classes Go Here 
+***********************************/
+.centered, .center {
+  text-align: center; }
+
+.padding-top {
+  padding-top: 10px; }
+
+.padding-bottom {
+  padding-bottom: 10px; }
+
+/******************************************************
+Respondent Table Styles
+******************************************************/
+th {
+  text-align: center;
+  color: #c04504;
+  background: #F7F7F7; }
+  th .glyphicon {
+    color: #CCCCCC; }
+
+th.orderable:hover {
+  cursor: pointer;
+  color: #70afb6; }
+
+tr.respondent:nth-child(odd) {
+  background: #fff; }
+tr.respondent:nth-child(even) {
+  background: #FBF8F2; }
+tr.respondent td:first-child {
+  color: #c04504; }
+tr.respondent:hover {
+  cursor: pointer; }
+  tr.respondent:hover td:first-child {
+    color: #70afb6; }
+
+/******************************************************
+End Respondent Table Styles
+******************************************************/
+#sidenav {
+  color: white;
+  text-align: center;
+  border-right: 1px solid #bbb;
+  padding-right: 0;
+  padding-left: 0;
+  z-index: 800;
+  box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.3); }
+  #sidenav .row {
+    margin-right: 0;
+    margin-left: 0; }
+  #sidenav img {
+    width: 100%; }
+  #sidenav h1 {
+    font-weight: bold;
+    margin-bottom: 2px; }
+  #sidenav p {
+    font-weight: bold;
+    font-size: 0.85em; }
+  #sidenav .select2-container {
+    width: 100%; }
+  #sidenav .box h1, #sidenav .box p {
+    color: #E6E8E9; }
+
+.stats {
+  border-bottom: 1px solid #D6D6D6; }
+  .stats h1 {
+    margin-top: 10px; }
+  .stats #side_total {
+    background: #004C72; }
+    .stats #side_total h1 {
+      font-size: 4em; }
+  .stats #side_completed {
+    background: #C24118; }
+  .stats #side_started {
+    background: #70AFB6; }
+
+.row .box {
+  padding-bottom: 10px; }
+
+.sidebar_nav {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  line-height: 1.42857;
+  margin-bottom: 30px;
+  background-color: #FFF;
+  color: #195D68; }
+  .sidebar_nav ul {
+    padding-left: 0;
+    margin-bottom: 0; }
+  .sidebar_nav ul.nav > li {
+    list-style: none outside none !important;
+    min-height: 50px;
+    border-bottom: 1px solid #D6D6D6; }
+    .sidebar_nav ul.nav > li > a {
+      font-size: 19px;
+      color: #555;
+      padding: 12px 25px; }
+      .sidebar_nav ul.nav > li > a.active {
+        color: #70afb6; }
+    .sidebar_nav ul.nav > li .dropdown-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      display: block;
+      width: 60px;
+      height: 50px;
+      text-align: center;
+      line-height: 55px;
+      color: #004F73; }
+      .sidebar_nav ul.nav > li .dropdown-toggle .icon-chevron-up {
+        display: none; }
+    .sidebar_nav ul.nav > li .dropdown-menu {
+      position: static;
+      width: 100%;
+      z-index: 1000;
+      border: none;
+      box-shadow: none; }
+      .sidebar_nav ul.nav > li .dropdown-menu li {
+        border: none; }
+  .sidebar_nav .nav > li {
+    text-align: left; }
+  .sidebar_nav li.open {
+    height: 150px; }
+    .sidebar_nav li.open .dropdown-toggle {
+      color: #c24118; }
+    .sidebar_nav li.open a {
+      background-color: inherit; }
+    .sidebar_nav li.open .icon-chevron-down {
+      display: none; }
+    .sidebar_nav li.open .icon-chevron-up {
+      display: inline; }
+  .sidebar_nav li.open.current {
+    height: 220px; }
+  .sidebar_nav li a:hover {
+    text-decoration: none;
+    background-color: inherit; }
+  .sidebar_nav .control {
+    padding: 0 12px 25px 12px; }
+    .sidebar_nav .control button {
+      margin-left: auto;
+      margin-right: auto; }
+  .sidebar_nav .help-link {
+    display: block;
+    font-size: 19px;
+    color: inherit; }
+  .sidebar_nav a:hover, .sidebar_nav .help-link:hover {
+    color: #70afb6 !important;
+    text-decoration: none;
+    cursor: pointer; }
+
+form.search {
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #D6D6D6;
+  margin-bottom: 0; }
+  form.search input, form.search button {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 150%;
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+    font-weight: 400;
+    font-style: normal; }
+  form.search button {
+    margin-left: 0 !important;
+    color: #444444; }
+  form.search input {
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #D6D6D6; }
+    form.search input:focus {
+      box-shadow: none;
+      border-color: #D6D6D6; }
+  form.search .input-group-addon {
+    font-size: 16px;
+    padding: 6px 0px 6px 25px;
+    padding-left: 25px;
+    background-color: #f3f4f6;
+    border: none; }
+  form.search .input-group-btn button {
+    font-size: 16px;
+    padding: 17px 20px 16px;
+    background-color: #f3f4f6;
+    border: none; }
+  form.search .input-group-btn button:hover {
+    color: #70afb6 !important; }
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }

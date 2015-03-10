@@ -1,0 +1,182 @@
+<div class="main dash-ecosystems" ng-cloak>
+    <div class="row" ost-header></div>
+    
+    <div class="main-content">
+        <div class="row">
+            <h2>{{page_title}}</h2>
+            <div class="col-sm-12 col-md-12">
+                <a back class="os-btn default margin-top"><span class="glyphicon glyphicon-chevron-left"></span>  Back</a>
+               <dl class="dl-horizontal">
+                    
+                    <p><strong>Organization name: </strong>{{getAnswer('org-name')}}</p>
+                    
+                    <p><strong>Primary organization type: </strong>{{getAnswer('org-type')}}</p>
+                    <p><strong>Website(s): </strong>
+                      <span ng-if="orgUrl">
+                        <a target="_blank" class="dark" style="font-size:14px;" href="{{ addhttp(orgUrl) }}">{{orgUrl}}</a>
+                      </span>
+                    </p>
+                    <div ng-show='user.username'>
+                        <span ng-show="orgAddress1">{{orgAddress1}}</br></span>
+                        <span ng-show="orgAddress2">{{orgAddress2}}</br></span>
+                        <span ng-show="orgCity">{{orgCity}}</span><span ng-show="orgCity && orgState">,</span>  {{orgState}} {{orgZipcode}}<span ng-show="orgCity || orgState || orgZipcode"></br></span>
+                        </br></span>
+                    </div>
+
+                    <p><strong>Project collaborators: </strong></p>
+                    <ul>
+                        <li ng-repeat="org in getAnswer('proj-collaborating-orgs')">{{org}}</li>
+                    </ul>
+
+
+                </dl>
+            </div>
+        </div>
+
+        <div dash-map-ost
+             lat="mapSettings.lat"
+             lng="mapSettings.lng"
+             zoom="mapSettings.zoom"
+             points="mapSettings.mapPoints"
+             units="mapSettings.mapPlanningUnits"
+             active-project="uuid"
+             boundary-path="'/static/survey/data/oceanspaces_ca_cc_boundary.json?v=2'"
+             show-popups="mapSettings.showPopups"
+             slug-to-color="ecosystemSlugToColor(slug)"
+             slug-to-label="ecosystemSlugToLabel(slug)"
+             ></div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="answer-panels">
+                     <div answers-panel 
+                        panel-title="'Project Information / Data Sharing' + (user.is_staff ? ' / Financial Info' : '')"
+                        html-content="viewPath + 'views/ost/answers/project.html'"
+                        species-answer="''"
+                        user="user"
+                        respondent="respondent"></div>
+
+
+                    <div answers-panel 
+                        panel-title="'Data Collection'"
+                        ng-if="user.username"
+                        html-content="viewPath + 'views/ost/answers/data.html'"
+                        species-answer="''"
+                        respondent="respondent"></div>
+
+                    <div answers-panel 
+                        panel-title="'Data Collection'"
+                        ng-if="!user.username"
+                        html-content="viewPath + 'views/ost/answers/data-pub.html'"
+                        species-answer="''"
+                        respondent="respondent"></div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Rocky Intertidal Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Rocky Intertidal Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-rockyintertidal-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Kelp and Shallow (0-30m) Rock')">
+                        <div answers-panel 
+                            panel-title="'Kelp and Shallow (0-30m) Rock'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-kelp-and-shallow-rock-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Mid depth (30-100m) Rock Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Mid depth (30-100m) Rock Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-middepthrock-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Estuarine and Wetland Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Estuarine and Wetland Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-estuarine-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Soft-bottom Intertidal and Beach Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Soft-bottom Intertidal and Beach Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-softbottomintertidal-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Soft bottom Subtidal (0-100m) Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Soft bottom Subtidal (0-100m) Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-softbottomsubtidal-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Deep Ecosystems and Canyons (>100m)')">
+                        <div answers-panel 
+                            panel-title="'Deep Ecosystems and Canyons (>100m)'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-deep-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Nearshore Pelagic Ecosystems')">
+                        <div answers-panel 
+                            panel-title="'Nearshore Pelagic Ecosystems'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-nearshore-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Consumptive Uses')">
+                        <div answers-panel 
+                            panel-title="'Consumptive Uses'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-consumptive-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+
+                    <div ng-show="answerContains('ecosystem-features', 'Non-consumptive Uses')">
+                        <div answers-panel 
+                            panel-title="'Non-consumptive Uses'"
+                            html-content="''"
+                            species-answer="getAnswer('ef-nonconsumptive-species')"
+                            respondent="respondent"></div>
+                    </div>
+
+                    <div ng-show="getAnswer('cde-types') || getAnswer('cd-types')">
+                        <div answers-panel 
+                            panel-title="'Contextual Data'"
+                            html-content="viewPath + 'views/ost/answers/contextual-data.html'"
+                            species-answer="''"
+                            respondent="respondent"></div>
+                        </div>
+                </div>
+            </div>
+        </div>    </div>
+
+    <div class="row" ng-show="user.is_superuser">
+        Responses Questions
+        <div ng-repeat="res in respondent.responses">
+            {{res.question}}                    
+        </div>
+    </div>
+</div>
+<div ng-include="'/static/survey/views/ost/dash-footer.html'"></div>

@@ -1,0 +1,70 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+.DS_Store
+node_modules
+dist
+.tmp
+.sass-cache
+app/components
+*.pyc
+*.pyo
+.DS_Store
+*~
+server/config/environments/local.py
+server/media
+server/public/static
+
+.vagrant
+geosurvey_env
+logs
+scripts/heroku-env.sh
+*.orig
+android/app/assets/www/assets
+android/app/assets/www/views
+android/app/assets/www/index.html
+android/app/bin
+android/app/gen
+mobile
+mobile/www/assets/
+mobile/www/index.html
+mobile/www/views/
+mobile/platforms/ios/www/
+mobile/platforms/ios/cordova/console.log
+mobile/platforms/ios/DigitalDeck.xcodeproj/project.xcworkspace/xcuserdata/eknuth.xcuserdatad/UserInterfaceState.xcuserstate
+server/static/usvi.apk
+*.dump
+backups
+scripts/cookbooks/node_staging.json

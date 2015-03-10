@@ -1,0 +1,35 @@
+<div class="main dash-overview" ng-cloak>
+    <div class="row" ost-header></div>
+    <div class="main-content">
+    
+        <div class="row">
+            <h2>{{page_title}}</h2>
+            <p>Color-coded dots in the map below represent monitoring sites reported in the Central Coast Monitoring Survey. Each color represents a different ecosystem or category of human use.
+            To explore monitoring in more detail, you can:</p>
+            <ul>
+                <li>Click on a dot in the map below to learn more about the monitoring project(s) collecting data at that location.</li>
+                <li>Use the “dive deeper” menu on the left to focus in on specific Ecosystem Features.</li>
+                <li>Use the table below to see all reported monitoring projects in the Central Coast. Click on a project name to learn more about that project.</li>
+            </ul>
+        </div>
+        <div dash-map-ost
+         lat="mapSettings.lat"
+         lng="mapSettings.lng"
+         zoom="mapSettings.zoom"
+         points="mapSettings.mapPoints"
+         units="mapSettings.mapPlanningUnits"
+         active-ecosystem-features="activeEcosystemFeatures"
+         boundary-path="'/static/survey/data/oceanspaces_ca_cc_boundary.json?v=2'"
+         slug-to-color="ecosystemSlugToColor(slug)"
+         slug-to-label="ecosystemSlugToLabel(slug)"
+         ></div>
+        
+        <div respondents-table 
+             resource='respondentTable.resource'
+             params='respondentTable.params' 
+             options='respondentTable.options'
+        ></div>
+        
+    </div><!-- main-content -->
+</div>
+<div ng-include="'/static/survey/views/ost/dash-footer.html'"></div>

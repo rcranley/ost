@@ -1,0 +1,33 @@
+<div class="main dash-welcome" ng-cloak>
+    <div class="row" ost-header></div>
+
+    <div class="main-content">
+        <div class="row">
+            <h2>{{page_title}}</h2>
+            <div class="col-sm-7">
+                <p>This interactive dashboard provides a platform for you to explore results of the Central Coast Monitoring Survey. The California Ocean Science Trust, together with its partners at the California Department of Fish and Wildlife and the California Ocean Protection Council, will use these results to help design and implement the next phase of MPA monitoring in the Central Coast. <p>
+                <ul>
+                    <li><a href="#/overview/{{survey.slug}}">Monitoring Activities</a> - Explore the types and locations of data collected in the Central Coast.</li>
+                    <li><a href="#/explore/{{survey.slug}}">Community Overview</a> - Learn about the organizations that are collecting data in the Central Coast.</li>
+                    <li><a href="#/about/{{survey.slug}}">About</a> - Learn more about this dashboard, the Central Coast Monitoring Survey, and the monitoring planning effort that is currently underway.</li>
+                </ul> 
+
+                <p class="centered">
+                    <a href="#/overview/{{survey.slug}}" class="os-btn default">
+                        Learn More – Monitoring Activities
+                    </a>
+                </p>
+
+            </div>
+            <div class="col-sm-5 center">
+                <img class="welcome" src="/static/survey/assets/img/oceanspaces_ca_cc_region.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="row centered">
+            <div class="col-sm-12">
+            </div>
+        </div>
+        </div> <!-- End main content -->
+</div>
+<div ng-include="'/static/survey/views/ost/dash-footer.html'"></div>

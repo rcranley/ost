@@ -1,0 +1,10 @@
+<div class="marker-popup-content">
+    <dl>
+        {% for project in projs %}
+        <dt>Project</dt>
+        <dd><a href="#/RespondentDetail/monitoring-project/{{obj.respondant.uuid}}">{{obj.respondant.project_name}}</a></dd>
+
+        <dt>Ecosystem Features</dt>
+        <dd>{{obj.ecosystem_feature_vebose}}</dd>
+    </dl>
+</div>

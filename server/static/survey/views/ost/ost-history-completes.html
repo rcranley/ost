@@ -1,0 +1,86 @@
+<div id="history-wrap" class="menu-page">
+    <div mobilemenu></div>
+    <!-- Begin page content -->
+    <div class="container">
+        
+        <div ng-show="showErrorMessage">
+            <div class="error">There was a problem loading your surveys.</div>
+            <div>Please sign in again.</div>
+            <a class="btn btn-default btn-lg btn-block panel-heading" href="#/signin">Sign In</a>
+        </div>
+
+        <div ng-show="showSurveyList">
+            <div class="row">
+                <h3>Completed Reports</h3>
+            </div>
+                
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-1">
+                    <span class="label" style="color: black;">From:</span>
+                </div>
+                <div class="col-md-4 input-group">
+                    <input class="form-control datepicker" type="date" ng-model="surveyFilter.start" />
+                </div>
+            </div>
+            <div class="row" style="margin-top: 3px">
+                <div class="col-md-1">
+                    <span class="label" style="color: black;">To:</span>
+                </div>
+                <div class="col-md-4 input-group">
+                    <input class="form-control datepicker" type="date" ng-model="surveyFilter.end" />
+                </div>
+            </div>
+            <div class="row" style="margin-top: 6px">
+                <div class="col-md-4 col-md-offset-1 input-group" style="padding-right: 5px;">
+                    <a ng-disabled="!updateEnabled" class="btn btn-main pull-right btn-update" ng-click="updateSurveyList()">Update</a>
+                </div>
+            </div>
+            
+            <div class="row" style="margin-top: 20px">
+
+                <h4 ng-hide="respondentList.length > 0">No surveys found. Try adjusting the date filter.</h4>
+
+                <div ng-repeat="respondent in respondentList | orderBy: 'ts':true">
+                    <button class="btn btn-block btn-main" 
+                        ng-click="gotoRespondentDetail(respondent)"
+                        ng-bind-html-unsafe="respondent.survey_title"></button>
+                </div>
+
+
+                <!-- <div class="table-history table-responsive">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr ng-click="gotoRespondentDetail(respondent)" 
+                                ng-repeat="respondent in respondentList | orderBy: 'ts':true">
+                                <td ng-bind-html-unsafe="respondent.survey_title"></td>
+                                <td>
+                                    <button 
+                                        class="btn btn-main" 
+                                        ng-click="gotoRespondentDetail(respondent)">
+                                        View</button>
+                                </td>
+                                <td>{{ $parent.getAnswer('proj-title', respondent) }}</td>
+                                <td>{{ $parent.getAnswer('org-name', respondent) }}</td>
+                                <td>{{ $parent.getAnswer('proj-data-years', respondent) }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+
+
+
+                <a ng-show="next20" class="btn btn-default btn-lg btn-block panel-heading" ng-click="showNext20(surveyFilter)">Show More...<i class="icon-spinner icon-spin" ng-show="gettingNext20"></i></a>
+            </div>
+
+        </div>  
+
+    </div>
+
+    <div ng-hide="showSurveyList || showErrorMessage" ng-include="viewPath + 'views/spinner.html'"></div>
+
+</div>
+
+
+<div id="history-footer">
+    <a class="btn pull-left" href="#/history"><span class="glyphicon glyphicon-chevron-left"></span></a>
+</div>
