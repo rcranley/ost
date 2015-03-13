@@ -1,8 +1,8 @@
 
 # Setup Local Vagrant Server
 You will need to have the following installed:
-1. [vagrant](https://www.vagrantup.com/)
-2. [fabric](http://www.fabfile.org/)
+- [vagrant](https://www.vagrantup.com/)
+- [fabric](http://www.fabfile.org/)
 
 ```bash
 vagrant up
@@ -127,24 +127,4 @@ fab staging:wilblack@192.241.228.91 deploy
 Live site
 ```
 fab staging:wilblack@tools-dev.oceanspaces.org deploy
-```
-
-
-#Phonegap 3.0
-Make sure that you have a recent version of node and install the phonegap node module.
-```bash
-brew upgrade node
-sudo npm install -g phonegap
-phonegap create mobile -n DigitalDeck -i com.pointnineseven.digitaldeck
-cd mobile && phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
-```
-
-To run the ios simulator
-```bash
-fab vagrant emulate_ios
-```
-
-To build and stage the android app
-```bash
-fab vagrant package_android_test
 ```
